@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exercitando</title>
+</head>
+<body>
+	<h1>Aplicando o aprendizado</h1>
+	
+	<form action="#" method="post">
+		<fieldset>
+			<legend>Cadastro</legend>
+			<p>
+				<label for="inome">Nome: </label>
+				<input type="text" name="nome" id="inome" placeholder="Nome completo" required autocomplete="name">
+			</p>
+
+			<p>
+				<label for="itel">Telefone: </label>
+				<input type="tel" name="tel" id="itel" placeholder="(xx)xxxx-xxxx" autocomplete="tel-local">
+			</p>
+
+			<p>
+				<label for="iemail">Email: </label>
+				<input type="emial" name="email" id="iemail" required autocomplete="email">
+			</p>
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend>Dados pessoais</legend>
+			<p>
+				<label for="inasc">Data de Nascimento: </label>
+				<input type="date" name="nasc" id="inasc" required>
+			</p>
+
+			<p>
+				<label for="isexo">Masculino</label>
+				<input type="radio" name="sexo" id="isexo" value="M">
+
+				<label for="isexo">Feminino</label>
+				<input type="radio" name="sexo" id="isexo" value="F">
+			</p>			
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend>Avaliação</legend>
+			<p>
+				De 0 a 10, o quando você recomendaria nossos produtos para outra pessoa?
+			</p>
+
+			<p>
+				<input type="range" name="nota" id="inota" min="0" max="10" value="5" required oninput="icont.innerHTML = Number(inota.value)">
+				<br>
+				<label for="icont">Nota: </label>
+				<output id="icont">5</output>
+			</p>
+			<br>
+			<p>
+				De 0 a 10, o que você achou da resistência de nossos produtos?
+			</p>
+
+			<p>
+				<input type="range" name="nota1" id="inota1" min="0" max="10" required oninput="inot.innerHTML = Number(inota1.value)">
+				<br>
+				<label for="inot">Nota: </label>
+				<output id="inot">5</output>
+			</p>
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend>Soma Matemática</legend>
+			<p>
+				<b>Resolva esta operação matemática e ganhe 10 pontos para sua próxima compra.</b>
+				<hr>
+				Fui ao mercado para comprar laranjas, vi que estavam com bom preço e resolvi comprar mais do que precisava, peguei 24 laranjas. Quando cheguei ao caixa lembrei que em casa eu já tinha outras 13 laranjas. Após o pagamento, com quantas laranjas eu fiquei ?
+			</p>
+
+			<p>
+				<label for="isoma">Quantidade 1</label>
+				<input type="number" name="soma" id="isoma" min="0" max="50" value="0" required oninput="itot.innerHTML = Number(isoma.value) + Number(isoma1.value)">
+			</p>
+
+			<p>
+				<label for="isoma1">Quantidade 2</label>
+				<input type="number" name="soma1" id="isoma1" min="0" max="50" value="0" required oninput="itot.innerHTML = Number(isoma.value) + Number(isoma1.value)">
+			</p>
+
+			<p>
+				<label for="itot">Total: </label>
+				<output id="itot">0</output>
+			</p>
+		</fieldset>
+		<br>
+
+		<input type="submit" value="Enviar">
+		<input type="reset" value="Limpar">
+	</form>
+
+</body>
+</html>
